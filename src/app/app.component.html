@@ -1,20 +1,33 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class='container'>
 
+  <div class='profile'>
+    <div class='profile__photo'>
+      <img src='/assets/images/photo.jpg' />
+    </div>
+
+    <div class='profile__name'>Nikolay Ivanov</div>
+    <div class='profile__position'>Full-Stack Developer</div>
+    <div class='profile__location'><i class='fa fa-map-marker-alt'></i> Tel-Aviv, Israel</div>
+
+    <hr class='profile__separator' />
+
+    <ul class='profile-social'>
+      <li><a href='http://github.com/nivans/' target='_blank'><i class='fab fa-linkedin'></i></a></li>
+      <li><a href='https://www.linkedin.com/in/nivans/' target='_blank'><i class='fab fa-github-square'></i></a></li>
+      <li><a href='https://www.facebook.com/nivans.is' target='_blank'><i class='fab fa-facebook-square'></i></a></li>
+      <li><a href='https://www.twitter.com/nivans_is' target='_blank'><i class='fab fa-twitter-square'></i></a></li>
+    </ul>
+
+    <a href='https://blog.nivans.pro/' class='profile__bloglink'><i class='fa fa-book'></i> Read blog <i>(russian language)</i></a>
+  </div>
+
+  <div class='content-wrapper'>
+    <div class='content'>
+
+      <router-outlet></router-outlet>
+
+      <div class='copyright'>&copy; 2011-2018 Nikolay Ivanov</div>
+    </div>
+  </div>
+
+</div>
