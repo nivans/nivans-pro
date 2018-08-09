@@ -1,3 +1,33 @@
 .buttons {
+  margin: 1rem;
   text-align: center;
+}
+
+.skills {
+  border-left: 3px solid #666;
+  padding-left: 25px;
+
+  li {
+    display: inline-block;
+    margin-right: 7px;
+
+    &:before {
+      content: '-';
+      margin-right: 5px;
+    }
+  }
+
+  .skills_s1 {
+    font-size: 19px;
+    font-weight: 800;
+  }
+
+  .skills_s2 {
+    font-size: 17px;
+    font-weight: 600;
+  }
+}
+
+.about {
+  margin: 1.5rem 0;
 }
