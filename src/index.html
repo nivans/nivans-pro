@@ -9,5 +9,26 @@
 </head>
 <body>
   <app-root></app-root>
+
+  <div id="loader">
+    <div class="spinner">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
+  </div>
+
+  <script>
+    var loader = document.getElementById('loader');
+    document.onreadystatechange = function () {
+      var t1 = setTimeout(function () {
+        loader.style.opacity = 0;
+        var t2 = setTimeout(function () {
+          loader.style.display = 'none';
+          delete(t1);
+          delete(t2);
+        }, 200);
+      }, 1000);
+    }
+  </script>
 </body>
 </html>
