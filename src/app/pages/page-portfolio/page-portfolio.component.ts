@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectService} from '../../services/project.service';
+import { Project } from '../../interfaces/project';
 
 @Component({
   selector: 'app-page-portfolio',
@@ -6,10 +8,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-portfolio.component.scss']
 })
 export class PagePortfolioComponent implements OnInit {
+  projects: Project[];
+  project;
+  projectActive = 0;
+  imageActive = 0;
 
-  constructor() { }
+  constructor(private projectsService: ProjectService) { }
 
   ngOnInit() {
+    this.projectsService.getProjects()
+      .first()
+      .subscribe(projects => {
+        this.projects = projects;
+        this.project = projects[0];
+      });
+  }
+
+  prevImage(): void {
+    if (this.imageActive - 1 < 0) {
+      this.imageActive = this.projects[this.projectActive].images.length - 1;
+    } else {
+      this.imageActive -= 1;
+    }
+  }
+
+  nextImage(): void {
+    if (this.imageActive + 1 === this.projects[this.projectActive].images.length) {
+      this.imageActive = 0;
+    } else {
+      this.imageActive += 1;
+    }
   }
 
 }

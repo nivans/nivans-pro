@@ -1,0 +1,67 @@
+<div class="content">
+  <div class="go-back">
+    <a routerLink="/"><i class="fa fa-arrow-circle-left"></i> return to home</a>
+  </div>
+
+  <div class="portfolio" *ngIf="projects">
+    <nav class="projects-menu">
+      <label>Some of my projects:</label>
+      <button *ngFor="let p of projects; let i = index"
+              class="portfolio__btn"
+              [ngClass]="{'active': p.title === project.title}"
+              [disabled]="p.title === project.title"
+              (click)="project = projects[i]; imageActive = 0">
+        {{ p.title }}
+      </button>
+    </nav>
+
+    <div class="project">
+
+      <h2 class="project__title">{{ project.title }}</h2>
+
+      <div class="project-description">
+        {{ project.description }}
+      </div>
+
+      <div class="project-tech-description">
+        {{ project.tech_description }}
+
+        <div class="project-technologies">
+          <section class="project-technologies-block">
+            <h3>Front-end:</h3>
+            <ul class="project-technologies-list">
+              <li *ngFor="let skill of project.frontend">{{ skill }}</li>
+            </ul>
+          </section>
+
+          <section class="project-technologies-block">
+            <h3>Back-end:</h3>
+            <ul class="project-technologies-list">
+              <li *ngFor="let skill of project.backend">{{ skill }}</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <ul class="project-images">
+        <li *ngFor="let image of project.images; let i = index"
+            class="project-images-item"
+            [ngClass]="{'active': i === imageActive}">
+          <img src="/assets/portfolio/{{ image }}" />
+        </li>
+        <li class="project-images-control">
+          <button class="project-images-control__arrow
+                         project-images-control__arrow_left"
+                  (click)="prevImage()">
+            <i class="fa fa-arrow-circle-left"></i>
+          </button>
+          <button class="project-images-control__arrow
+                         project-images-control__arrow_right"
+                  (click)="nextImage()">
+            <i class="fa fa-arrow-circle-right"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

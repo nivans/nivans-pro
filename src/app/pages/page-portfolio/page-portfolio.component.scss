@@ -1,0 +1,133 @@
+.content {
+  width: 1100px;
+}
+
+.portfolio {
+  .projects-menu {
+    text-align: center;
+
+    label {
+      display: block;
+      margin-bottom: .5rem;
+    }
+  }
+
+  .portfolio__btn {
+    margin: 0 .3rem;
+    background: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid #333;
+    padding-bottom: .2rem;
+
+    &:hover {
+      color: #151e8a;
+      border-color: #151e8a;
+    }
+
+    &.active {
+      color: #0b0050;
+      border-color: #0b0050;
+    }
+  }
+  .project {
+    text-align: center;
+
+    .project__title {
+      color: #0b0050;
+      font-size: 2.5rem;
+      margin: 1.5rem 0 .5rem;
+    }
+
+    .project-description {
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    .project-tech-description {
+      margin: .5rem 0 1.5rem;
+      padding: 1rem 0;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      line-height: 1.6;
+    }
+
+    .project-images {
+      list-style-type: none;
+      padding: 0;
+      margin: 0 0 1rem;
+      position: relative;
+      width: 100%;
+      height: 70vh;
+
+      .project-images-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+
+        &.active {
+          opacity: 1;
+        }
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+
+      .project-images-control__arrow {
+        position: absolute;
+        top: 40%;
+        z-index: 99999;
+        font-size: 3rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        opacity: .4;
+        transition: opacity .2s ease-in-out;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &.project-images-control__arrow_left {
+          left: 0;
+        }
+
+        &.project-images-control__arrow_right {
+          right: 0;
+        }
+      }
+    }
+
+    .project-technologies {
+      display: flex;
+
+      h3 {
+        margin: 1rem 0 0;
+      }
+
+      section {
+        width: 50%;
+
+        .project-technologies-list {
+          margin: .5rem 0;
+          padding: 0;
+          list-style-type: none;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+
+          li {
+            margin: .1rem .7rem;
+          }
+        }
+      }
+    }
+  }
+}

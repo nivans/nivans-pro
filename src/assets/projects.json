@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Foroutes",
+    "description": "A service for travelers providing the possibility of online-constructing a route.",
+    "tech_description": "Blog-service is built in a deep connection with Google Maps API v3. The application works on Node.JS + Angular 5, database - MySQL. Using the internal identifiers of Google Maps API, was implemented a system for searching and finding similar routes. Design was also developed by me.",
+    "frontend": [
+      "Angular 6", "Bootstrap 4", "HTML5", "SCSS"
+    ],
+    "backend": [
+      "Node.JS", "Express", "Sequelize", "MySQL", "Python", "Docker"
+    ],
+    "images": [
+      "foroutes-1.jpg",
+      "foroutes-2.jpg",
+      "foroutes-3.jpg"
+    ]
+  },
+  {
+    "title": "SpaceVPN",
+    "description": "A service for providing access to the VPN-networks.",
+    "tech_description": "The service is developed on the CMS Wordpress (in accordance with the wishes of the client). Integration with the billing server of the service was carried out, and integration with payment gateways was implemented. On the basis of WordPress implemented a panel-administrator allowing to monitor and manage user accounts on the billing server.",
+    "frontend": [
+      "Bootstrap 4", "jQuery", "HTML5", "SCSS"
+    ],
+    "backend": [
+      "PHP", "CMS Wordpress", "MySQL", "Python"
+    ],
+    "images": [
+      "spacevpn-1.jpg",
+      "spacevpn-2.jpg",
+      "spacevpn-3.jpg"
+    ]
+  },
+  {
+    "title": "Elfruna",
+    "description": "Internet store of food for vegans.",
+    "tech_description": "Internet store on the CMS OpenCart. Several plug-ins are implemented that realize the necessary functionality. Design was also developed by me.",
+    "frontend": [
+      "Bootstrap 4", "jQuery", "HTML5", "SCSS"
+    ],
+    "backend": [
+      "PHP", "CMS OpenCart", "MySQL"
+    ],
+    "images": [
+      "elfruna-1.jpg",
+      "elfruna-2.jpg",
+      "elfruna-3.jpg"
+    ]
+  }
+]
