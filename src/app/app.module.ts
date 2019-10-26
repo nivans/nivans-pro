@@ -6,7 +6,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { PagePortfolioComponent } from './pages/page-portfolio/page-portfolio.component';
 import { HttpClientModule } from '@angular/common/http';
-import 'rxjs/add/operator/first';
 
 const routes: Routes = [
   {

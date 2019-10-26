@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService} from '../../services/project.service';
 import { Project } from '../../interfaces/project';
+import {first} from 'rxjs/operators';
 
 @Component({
   selector: 'app-page-portfolio',
@@ -17,7 +18,7 @@ export class PagePortfolioComponent implements OnInit {
 
   ngOnInit() {
     this.projectsService.getProjects()
-      .first()
+      .pipe(first())
       .subscribe(projects => {
         this.projects = projects;
         this.project = projects[0];
